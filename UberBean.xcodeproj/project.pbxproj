@@ -15,6 +15,7 @@
 		210318CE20DD78CA00434B81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 210318CD20DD78CA00434B81 /* main.m */; };
 		210318D620DD7EE100434B81 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210318D520DD7EE100434B81 /* MapKit.framework */; };
 		210318D920DD839F00434B81 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 210318D820DD839F00434B81 /* Annotation.m */; };
+		210318E220DD992700434B81 /* Cafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 210318E120DD992700434B81 /* Cafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		210318D520DD7EE100434B81 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		210318D720DD839F00434B81 /* Annotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		210318D820DD839F00434B81 /* Annotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		210318E020DD992700434B81 /* Cafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cafe.h; sourceTree = "<group>"; };
+		210318E120DD992700434B81 /* Cafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cafe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				210318BF20DD78C800434B81 /* AppDelegate.m */,
 				210318C120DD78C800434B81 /* ViewController.h */,
 				210318C220DD78C800434B81 /* ViewController.m */,
+				210318E020DD992700434B81 /* Cafe.h */,
+				210318E120DD992700434B81 /* Cafe.m */,
 				210318D720DD839F00434B81 /* Annotation.h */,
 				210318D820DD839F00434B81 /* Annotation.m */,
 				210318C420DD78C800434B81 /* Main.storyboard */,
@@ -163,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210318E220DD992700434B81 /* Cafe.m in Sources */,
 				210318C320DD78C800434B81 /* ViewController.m in Sources */,
 				210318CE20DD78CA00434B81 /* main.m in Sources */,
 				210318D920DD839F00434B81 /* Annotation.m in Sources */,
