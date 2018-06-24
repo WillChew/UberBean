@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import "NetworkManager.h"
 
 @interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic,strong) CLLocationManager *locationManager;
+@property (nonatomic,strong) NSArray *cafes;
 
 
 @end
@@ -21,17 +23,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    self.locationManager = [[CLLocationManager alloc]init];
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    self.locationManager.distanceFilter = 20;
-    self.locationManager.delegate = self;
-    [self.locationManager requestWhenInUseAuthorization];
-    [self.locationManager requestLocation];
-    
-    self.mapView.delegate = self;
-    self.mapView.showsUserLocation = YES;
-    
+    [NetworkManager getCafesAtLatitude:@"43.6446" andLongitude:@"-79.3950" completion:^(NSArray<Cafe*>*cafes) {
+        self.cafes = cafes;
+        [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+            NSLog(@"WORKING");
+            
+        }];
+    }];
+
+
+
+
+
+self.locationManager = [[CLLocationManager alloc]init];
+self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+self.locationManager.distanceFilter = 20;
+self.locationManager.delegate = self;
+[self.locationManager requestWhenInUseAuthorization];
+[self.locationManager requestLocation];
+
+self.mapView.delegate = self;
+self.mapView.showsUserLocation = YES;
+
+
+
 }
 
 
